@@ -30,11 +30,17 @@ Face2Emo는 얼굴 이미지로부터 감정을 인식하고, 개인 고유 피�
 
 # 3. Repository Structure
 📦 Face2Emo
+
 ┣ 📂 Models
+
 ┣ 📂 datasets
+
 ┣ 📂 html
+
 ┣ 📂 images
+
 ┣ 📜 README.md
+
 ┗ 📜 requirements.txt
 
 # 4. Dataset
@@ -51,16 +57,26 @@ Face2Emo는 얼굴 이미지로부터 감정을 인식하고, 개인 고유 피�
 
 # 6. Final Model
 
-## Model Architecture
+1. Model Architecture
 - Compound Scaling Model (EfficientNet-B2, 9.9M parameters)
-## Transfer Learning
+2. Transfer Learning
 - AffectNet pre-trained
 - 2-phase training
-## Optimization & Regularization
+3. Optimization & Regularization
 - Weighted Cross Entropy
 - Label Smoothing
 
 # 7. Color Matching
+1. Emotional Color
+- Softmax 확률 기반 Top-3 blending
+- 감정-색 매핑
+
+2. Personal Color
+- MediaPipe FaceLandmarker (478 pts)
+- Skin / Hair / Iris 영역 추출
+- RGB → CIE LAB 변환
+- 16-Type Grid Classification
+
 # 8. Results
 # 9. Demo
 
